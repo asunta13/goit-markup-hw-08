@@ -1,0 +1,44 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include mobile {
+		width: 480px;
+	}
+	@include tablet {
+		width: 768px;
+	}
+	@include desktop {
+		width: 1200px;
+	}
+}
+body {
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 0.03em;
+}
+.list {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+}
+.section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@include desktop {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
+}
+.title {
+	margin-bottom: 30px;
+	text-align: center;
+	@include font(700, 28, 1.17);
+	color: var(--title-color);
+	@include desktop {
+		margin-bottom: 50px;
+		@include font(700, 36, 1.17);
+	}
+}

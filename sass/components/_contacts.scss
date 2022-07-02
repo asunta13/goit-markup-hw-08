@@ -1,0 +1,34 @@
+.header .contacts-list {
+	display: flex;
+	margin-left: auto;
+}
+
+.contacts__email.link,
+.contacts__tel.link {
+	@extend %align-list;
+	justify-content: center;
+	fill: #afb1b8;
+	transition: color 250ms var(--timing-function),
+		fill 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+		fill: var(--accent-color);
+	}
+}
+
+.contacts__item:not(:last-child) {
+	margin-right: 50px;
+}
+.contacts__icon {
+	margin-right: 10px;
+}
+
+.contacts__email,
+.contacts__tel {
+	display: inline-block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	@include font(500, 14px, 1.14);
+	color: var(--add-color);
+}

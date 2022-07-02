@@ -1,0 +1,22 @@
+.join-us-list {
+	display: flex;
+}
+
+.join-us-section {
+	margin-left: 70px;
+}
+.join-us {
+	@extend %footer-appeal;
+}
+
+.join-us__link {
+	@extend %soc__link;
+	@extend %align-list;
+	background-color: rgba(255, 255, 255, 0.1);
+	fill: var(--background-clr);
+	transition: background-color 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+	}
+}

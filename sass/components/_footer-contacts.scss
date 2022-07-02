@@ -1,0 +1,28 @@
+.googlemap {
+	@include font(400, 14px, 2);
+	color: #ffffff;
+	font-style: normal;
+	transition: color 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.footer__link {
+	@include font(400, 14px, 2);
+	color: rgba(255, 255, 255, 0.6);
+	transition: color 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.footer__item {
+	display: block;
+	font-style: normal;
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
+}

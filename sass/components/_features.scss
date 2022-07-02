@@ -1,0 +1,100 @@
+.features.section {
+	@include desktop {
+		padding-bottom: 0px;
+	}
+}
+.features-list {
+	@include tablet {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
+.features__item {
+	margin-bottom: 30px;
+	@include tablet {
+		width: calc((100% - 30px) / 2);
+		height: 100%;
+		margin: 0;
+	}
+	@include desktop {
+		flex-basis: calc((100% - 90px) / 4);
+	}
+}
+
+.features__item.antenna::before {
+	margin-bottom: 30px;
+	display: block;
+	content: "";
+	max-width: 450px;
+	height: 120px;
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--add-bckgrnd-clr);
+	background-image: url(../images/antenna.svg);
+	@include desktop {
+		width: 270px;
+	}
+}
+
+.features__item.clock::before {
+	margin-bottom: 30px;
+	display: block;
+	content: "";
+	max-width: 450px;
+	height: 120px;
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--add-bckgrnd-clr);
+	background-image: url(../images/clock.svg);
+	@include desktop {
+		width: 270px;
+	}
+}
+.features__item.diagram::before {
+	margin-bottom: 30px;
+	display: block;
+	content: "";
+	max-width: 450px;
+	height: 120px;
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--add-bckgrnd-clr);
+	background-image: url(../images/diagram.svg);
+	@include desktop {
+		width: 270px;
+	}
+}
+.features__item.astronaut::before {
+	margin-bottom: 30px;
+	display: block;
+	content: "";
+	max-width: 450px;
+	height: 120px;
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--add-bckgrnd-clr);
+	background-image: url(../images/astronaut.svg);
+	@include desktop {
+		width: 270px;
+	}
+}
+.features__title {
+	text-align: center;
+	margin-bottom: 10px;
+	@include font(700, 14px, 1.14);
+	text-transform: uppercase;
+	color: var(--main-color);
+	@include desktop {
+		text-align: left;
+	}
+}
+
+.features__text {
+	@include font(400, 14px, 1.71);
+	color: var(--add-color);
+}

@@ -1,0 +1,28 @@
+.soc-list {
+	display: flex;
+	justify-content: center;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.soc__item {
+	width: 44px;
+	height: 44px;
+	margin-right: 10px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.soc__link {
+	@extend %soc__link;
+	@extend %align-list;
+	fill: #afb1b8;
+	transition: fill 250ms var(--timing-function),
+		background-color 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		fill: var(--background-clr);
+	}
+}
