@@ -1,16 +1,26 @@
 .modal {
-	width: 528px;
-	height: 581px;
+	max-width: 450px;
+	max-height: 609px;
 	background-color: var(--background-clr);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(1) rotate(0);
-	transition: transform 250ms var(--timing-function);
+	left: 15px;
+	top: 93px;
 	padding: 40px;
+	@include tablet {
+		left: 159px;
+		top: 208px;
+	}
+	@include desktop {
+		max-width: 528px;
+		max-height: 581px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1) rotate(0);
+		transition: transform 250ms var(--timing-function);
+	}
 }
 .modal__title {
 	@include font(700, 20px, 1.15);
@@ -85,22 +95,33 @@
 .checkbox {
 	margin-top: 20px;
 	margin-bottom: 30px;
-	@include font(400, 14px, 1.71);
+	@include font(400, 12px, 1.17);
 	color: #757575;
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	@include desktop {
+		@include font(400, 14px, 1.71);
+	}
+}
+.checkbox_text {
+	display: block;
+	margin-right: 2px;
 }
 .checkbox__link {
+	@include font(400, 12px, 1.17);
 	color: var(--accent-color);
 	display: block;
 	text-decoration: none;
 	border-bottom: 1px solid var(--accent-color);
 	padding-bottom: 0;
 	line-height: 1;
+	@include desktop {
+		@include font(400, 14px, 1.17);
+	}
 }
 .icon-check {
 	display: inline-block;
+	margin-right: 6px;
 	width: 16px;
 	height: 15px;
 	border: 2px solid #2a2a2a;
