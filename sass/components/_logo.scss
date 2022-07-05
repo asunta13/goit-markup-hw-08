@@ -18,6 +18,11 @@
 .logo-header {
 	padding-top: 16px;
 	padding-bottom: 16px;
+	@include tablet {
+		padding-top: 26px;
+		padding-bottom: 26px;
+		margin-right: 88px;
+	}
 	@include desktop {
 		margin-right: 93px;
 		padding-top: 24px;
@@ -30,5 +35,12 @@
 	margin-bottom: 20px;
 }
 .logo-wrap {
-	width: 231px;
+	@media screen and (max-width: 1199px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@include desktop {
+		width: 231px;
+	}
 }

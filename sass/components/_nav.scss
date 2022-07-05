@@ -7,6 +7,9 @@
 
 .nav {
 	@extend %align-list;
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-right: 88px;
+	}
 }
 .nav__item:not(:last-child) {
 	margin-right: 50px;

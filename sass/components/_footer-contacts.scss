@@ -1,3 +1,12 @@
+.address .list {
+	@media screen and (max-width: 1199px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 60px;
+	}
+}
+
 .googlemap {
 	@include font(400, 14px, 2);
 	color: #ffffff;

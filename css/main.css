@@ -387,6 +387,13 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 768px) {
+  .logo-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo-header {
     margin-right: 93px;
@@ -401,13 +408,28 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-wrap {
-  width: 231px;
+@media screen and (max-width: 1199px) {
+  .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-wrap {
+    width: 231px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .nav-list {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav {
+    margin-right: 88px;
   }
 }
 
@@ -450,9 +472,15 @@ body {
   display: flex;
   margin-left: auto;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .header .contacts-list {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -469,23 +497,65 @@ body {
   fill: var(--accent-color);
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contacts__icon {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts__icon.email {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon.email {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon.tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon.tel {
+    width: 12px;
+    height: 16px;
+  }
+}
+
 .contacts__email,
 .contacts__tel {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0, 2em;
   color: var(--add-color);
+}
+@media screen and (min-width: 1200px) {
+  .contacts__email,
+.contacts__tel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -784,9 +854,35 @@ body {
   padding-bottom: 60px;
 }
 
-.container-wrap {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container-wrap {
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-wrap {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .address .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
 .googlemap {
@@ -824,8 +920,18 @@ body {
   display: flex;
 }
 
-.join-us-section {
-  margin-left: 70px;
+@media screen and (max-width: 1199px) {
+  .join-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join-us-section {
+    margin-left: 70px;
+  }
 }
 
 .join-us__link {
@@ -837,16 +943,39 @@ body {
   background-color: var(--accent-color);
 }
 
-.sign-up-section {
-  margin-left: 93px;
+@media screen and (max-width: 1199px) {
+  .sign-up-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sign-up-section {
+    margin-left: 93px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sign-up {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .sign-up-form {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .sign-up__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -870,9 +999,22 @@ body {
   border-color: var(--accent-color);
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 1200px) {
+  .sign-up__input {
+    width: 358px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .sign-up__input {
+    margin-bottom: 20px;
+  }
+}
 
-.sign-up__label {
-  margin-right: 12px;
+@media screen and (min-width: 1200px) {
+  .sign-up__label {
+    margin-right: 12px;
+  }
 }
 
 .signup-btn {
@@ -1074,8 +1216,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .modal {
+    position: absolute;
     left: 159px;
-    top: 208px;
+    top: 108px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1171,24 +1314,40 @@ body {
 .checkbox {
   margin-top: 20px;
   margin-bottom: 30px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  color: #757575;
   display: flex;
   align-items: center;
 }
+
+.checkbox_text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  display: block;
+  margin-right: 2px;
+  color: #757575;
+}
 @media screen and (min-width: 1200px) {
-  .checkbox {
+  .checkbox_text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
   }
 }
-
-.checkbox_text {
-  display: block;
-  margin-right: 2px;
+@media screen and (min-width: 400px) and (max-width: 465px) {
+  .checkbox_text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.71;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 399px) {
+  .checkbox_text {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 1.71;
+    letter-spacing: 0.01em;
+  }
 }
 
 .checkbox__link {
@@ -1207,6 +1366,22 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.17;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 465px) {
+  .checkbox__link {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.71;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 399px) {
+  .checkbox__link {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 1.71;
+    letter-spacing: 0.01em;
   }
 }
 
