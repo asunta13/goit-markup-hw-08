@@ -156,11 +156,10 @@ body {
     margin-left: auto;
     cursor: pointer;
     fill: var(--main-color);
-    transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function);
   }
   .mobile-menu__button:hover, .mobile-menu__button:focus {
     fill: var(--accent-color);
-    border-color: var(--accent-color);
   }
 }
 
@@ -174,11 +173,10 @@ body {
   right: 15px;
   cursor: pointer;
   fill: var(--main-color);
-  transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .mobile-menu__close-button:hover, .mobile-menu__close-button:focus {
   fill: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 .mob-menu {
@@ -191,6 +189,7 @@ body {
   position: fixed;
   z-index: 1;
   padding: 48px 40px;
+  transition: visibility 250ms var(--timing-function);
 }
 .mob-menu .mob-container {
   display: flex;
@@ -226,6 +225,10 @@ body {
   background-color: var(--accent-color);
   bottom: 0;
   left: 0;
+}
+
+.mob-menu__link.link.current {
+  color: var(--accent-color);
 }
 
 .mob-menu__item:not(:last-child) {
@@ -669,7 +672,7 @@ body {
   text-transform: uppercase;
   color: var(--main-color);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .features__title {
     text-align: left;
   }
@@ -1170,7 +1173,7 @@ body {
   text-align: left;
 }
 
-.examples_text {
+.examples__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -1316,6 +1319,11 @@ body {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    justify-content: center;
+  }
 }
 
 .checkbox_text {

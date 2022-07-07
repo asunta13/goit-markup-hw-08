@@ -67,7 +67,7 @@
 	color: var(--main-color);
 	text-align: left;
 }
-.examples_text {
+.examples__text {
 	@include font(400, 16px, 1.88);
 	color: var(--add-color);
 	text-align: left;

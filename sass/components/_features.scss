@@ -89,7 +89,7 @@
 	@include font(700, 14px, 1.14);
 	text-transform: uppercase;
 	color: var(--main-color);
-	@include desktop {
+	@include tablet {
 		text-align: left;
 	}
 }

@@ -98,6 +98,9 @@
 	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
+	@include desktop {
+		justify-content: center;
+	}
 }
 .checkbox_text {
 	@include font(400, 12px, 1.17);

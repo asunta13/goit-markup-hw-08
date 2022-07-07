@@ -7,12 +7,10 @@
 		margin-left: auto;
 		cursor: pointer;
 		fill: var(--main-color);
-		transition: fill 250ms var(--timing-function),
-			border-color 250ms var(--timing-function);
+		transition: fill 250ms var(--timing-function);
 		&:hover,
 		&:focus {
 			fill: var(--accent-color);
-			border-color: var(--accent-color);
 		}
 	}
 	display: none;
@@ -27,12 +25,10 @@
 	right: 15px;
 	cursor: pointer;
 	fill: var(--main-color);
-	transition: fill 250ms var(--timing-function),
-		border-color 250ms var(--timing-function);
+	transition: fill 250ms var(--timing-function);
 	&:hover,
 	&:focus {
 		fill: var(--accent-color);
-		border-color: var(--accent-color);
 	}
 }
 .mob-menu {
@@ -45,6 +41,7 @@
 	position: fixed;
 	z-index: 1;
 	padding: 48px 40px;
+	transition: visibility 250ms var(--timing-function);
 	.mob-container {
 		display: flex;
 		flex-direction: column;
@@ -78,6 +75,9 @@
 			left: 0;
 		}
 	}
+}
+.mob-menu__link.link.current {
+	color: var(--accent-color);
 }
 .mob-menu__item:not(:last-child) {
 	margin-bottom: 32px;
